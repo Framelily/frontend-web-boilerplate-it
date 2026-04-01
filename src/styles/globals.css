@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/noto-sans-thai';
+
+@theme {
+  --font-family-sans: 'Noto Sans Thai Variable', sans-serif;
+
+  --color-primary: #F7931E;
+  --color-secondary: #4F4F4F;
+  --color-error: #E90A0E;
+  --color-text: #1D2027;
+  --color-background-body: #F7F9FA;
+  --color-border: #E5E7EB;
+  --color-light-gray: #E8E8E8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  background-color: var(--color-background-body);
+}
+
+/* Ant Design global overrides */
+.ant-btn-primary {
+  background-color: var(--color-primary);
+}

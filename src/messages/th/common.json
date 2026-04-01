@@ -1,0 +1,35 @@
+{
+  "app": {
+    "name": "Project Name"
+  },
+  "nav": {
+    "home": "หน้าแรก",
+    "about": "เกี่ยวกับ",
+    "contact": "ติดต่อ",
+    "login": "เข้าสู่ระบบ",
+    "register": "สมัครสมาชิก",
+    "logout": "ออกจากระบบ"
+  },
+  "auth": {
+    "loginTitle": "เข้าสู่ระบบ",
+    "registerTitle": "สมัครสมาชิก",
+    "username": "ชื่อผู้ใช้",
+    "password": "รหัสผ่าน",
+    "confirmPassword": "ยืนยันรหัสผ่าน",
+    "forgotPassword": "ลืมรหัสผ่าน?",
+    "loginButton": "เข้าสู่ระบบ",
+    "registerButton": "สมัครสมาชิก"
+  },
+  "common": {
+    "loading": "กำลังโหลด...",
+    "error": "เกิดข้อผิดพลาด",
+    "save": "บันทึก",
+    "cancel": "ยกเลิก",
+    "delete": "ลบ",
+    "edit": "แก้ไข",
+    "search": "ค้นหา",
+    "back": "กลับ",
+    "confirm": "ยืนยัน",
+    "noData": "ไม่พบข้อมูล"
+  }
+}
