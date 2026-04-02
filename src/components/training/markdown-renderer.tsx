@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import styled from 'styled-components'
 
-import 'highlight.js/styles/github.css'
+import 'highlight.js/styles/github-dark.css'
 
 interface MarkdownRendererProps {
   content: string
