@@ -54,7 +54,7 @@ export default function TrainingLayout({ menu, docs, defaultKey }: TrainingLayou
           placement="left"
           open={drawerOpen}
           onClose={() => setDrawerOpen(false)}
-          width={280}
+          size="default"
           styles={{ body: { padding: 0 } }}
         >
           {sidebarContent}
