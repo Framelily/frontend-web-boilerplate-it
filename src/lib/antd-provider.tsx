@@ -26,6 +26,9 @@ const theme = {
     Menu: {
       itemSelectedBg: '#e6f4ee',
       itemSelectedColor: '#1a4d36',
+      itemActiveBg: '#e6f4ee',
+      activeBarBorderWidth: 3,
+      itemBorderRadius: 0,
     },
   },
 }
