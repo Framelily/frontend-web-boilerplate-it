@@ -220,13 +220,14 @@ claude
 
 ## 1.5 Keyboard Shortcuts
 
-| ปุ่ม | หน้าที่ |
-|---|---|
-| `Enter` | ส่งข้อความ / confirm action |
-| `Shift+Tab` | สลับ **Plan Mode** (Claude วางแผนก่อน ไม่ลงมือทันที) |
-| `Esc` | ยกเลิก / หยุดการทำงานที่กำลังรัน |
-| `Ctrl+C` | ออกจาก session |
-| `↑` / `↓` | เลื่อนดู history ของ prompt ที่พิมพ์ไป |
+| ปุ่ม (Mac) | ปุ่ม (Windows/Linux) | หน้าที่ |
+|---|---|---|
+| `Enter` | `Enter` | ส่งข้อความ / confirm action |
+| `Option+Enter` | `Ctrl+Enter` | ขึ้นบรรทัดใหม่ (ไม่ส่ง) |
+| `Shift+Tab` | `Shift+Tab` | สลับ **Plan Mode** (Claude วางแผนก่อน ไม่ลงมือทันที) |
+| `Esc` | `Esc` | ยกเลิก / หยุดการทำงานที่กำลังรัน |
+| `Ctrl+C` | `Ctrl+C` | ออกจาก session |
+| `↑` / `↓` | `↑` / `↓` | เลื่อนดู history ของ prompt ที่พิมพ์ไป |
 
 ### Plan Mode คืออะไร?
 

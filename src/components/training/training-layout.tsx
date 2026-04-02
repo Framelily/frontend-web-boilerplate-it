@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { Drawer, Menu } from 'antd'
 import styled from 'styled-components'
 
+import { useMemo } from 'react'
+
 import type { IDocGroup } from '@/lib/markdown'
 import TrainingHeader from './training-header'
 import MarkdownRenderer from './markdown-renderer'
@@ -17,6 +19,20 @@ interface TrainingLayoutProps {
 export default function TrainingLayout({ menu, docs, defaultKey }: TrainingLayoutProps) {
   const [activeKey, setActiveKey] = useState(defaultKey)
   const [drawerOpen, setDrawerOpen] = useState(false)
+
+  const fileKeyMap = useMemo(() => {
+    const map: Record<string, string> = {}
+    for (const group of menu) {
+      for (const item of group.items) {
+        // Map full filePath → key
+        map[item.filePath] = item.key
+        // Map basename (e.g. "session-2-claudemd-rules.md") → key
+        const basename = item.filePath.split('/').pop()
+        if (basename) map[basename] = item.key
+      }
+    }
+    return map
+  }, [menu])
 
   const menuItems = menu.map((group) => ({
     key: group.label,
@@ -60,7 +76,11 @@ export default function TrainingLayout({ menu, docs, defaultKey }: TrainingLayou
           {sidebarContent}
         </Drawer>
         <MainContent>
-          <MarkdownRenderer content={docs[activeKey] || '# Not found'} />
+          <MarkdownRenderer
+            content={docs[activeKey] || '# Not found'}
+            onNavigate={handleMenuClick}
+            fileKeyMap={fileKeyMap}
+          />
         </MainContent>
       </ContentWrapper>
     </PageWrapper>

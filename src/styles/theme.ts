@@ -2,7 +2,7 @@ import type { ThemeConfig } from 'antd'
 
 export const antdTheme: ThemeConfig = {
   token: {
-    colorPrimary: '#F7931E',
+    colorPrimary: '#2E7D5B',
     colorError: '#E90A0E',
     fontFamily: "'Noto Sans Thai Variable', sans-serif",
     borderRadius: 8,

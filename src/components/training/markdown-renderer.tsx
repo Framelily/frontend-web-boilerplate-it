@@ -9,12 +9,43 @@ import 'highlight.js/styles/github-dark.css'
 
 interface MarkdownRendererProps {
   content: string
+  onNavigate?: (key: string) => void
+  fileKeyMap?: Record<string, string>
 }
 
-export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
+export default function MarkdownRenderer({ content, onNavigate, fileKeyMap }: MarkdownRendererProps) {
   return (
     <MarkdownWrapper>
-      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeHighlight]}
+        components={{
+          a: ({ href, children, ...props }) => {
+            if (href && href.endsWith('.md') && onNavigate && fileKeyMap) {
+              const matchedKey = fileKeyMap[href]
+              if (matchedKey) {
+                return (
+                  <a
+                    {...props}
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      onNavigate(matchedKey)
+                    }}
+                  >
+                    {children}
+                  </a>
+                )
+              }
+            }
+            return (
+              <a href={href} {...props}>
+                {children}
+              </a>
+            )
+          },
+        }}
+      >
         {content}
       </ReactMarkdown>
     </MarkdownWrapper>
@@ -110,15 +141,15 @@ const MarkdownWrapper = styled.div`
   }
 
   blockquote {
-    border-left: 4px solid #f7931e;
+    border-left: 4px solid #2E7D5B;
     padding: 8px 16px;
     margin: 16px 0;
-    background: #fff7ed;
+    background: #ecfdf5;
     border-radius: 0 8px 8px 0;
   }
 
   a {
-    color: #f7931e;
+    color: #2E7D5B;
     text-decoration: none;
 
     &:hover {

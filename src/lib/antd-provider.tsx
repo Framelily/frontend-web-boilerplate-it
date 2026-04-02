@@ -6,7 +6,7 @@ import type { ReactNode } from 'react'
 
 const theme = {
   token: {
-    colorPrimary: '#F7931E',
+    colorPrimary: '#2E7D5B',
     colorError: '#E90A0E',
     fontFamily: "'Noto Sans Thai Variable', sans-serif",
     borderRadius: 8,
@@ -22,6 +22,10 @@ const theme = {
     },
     Table: {
       headerBg: '#FAFAFA',
+    },
+    Menu: {
+      itemSelectedBg: '#e6f4ee',
+      itemSelectedColor: '#1a4d36',
     },
   },
 }
