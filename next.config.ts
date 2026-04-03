@@ -5,6 +5,9 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
 const nextConfig: NextConfig = {
   output: 'standalone',
+  outputFileTracingIncludes: {
+    '/\\[locale\\]/training': ['.claude/CLAUDE.md', 'docs/**/*.md', 'CLAUDE.md'],
+  },
   reactCompiler: true,
   compiler: {
     styledComponents: true,

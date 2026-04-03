@@ -36,6 +36,7 @@ export const DOC_MENU: IDocGroup[] = [
     label: 'DOCS',
     items: [
       { key: 'guide', label: 'Claude Code Guide', filePath: 'docs/claude-code-guide.md' },
+      { key: 'playwright-e2e', label: 'Playwright E2E Guide', filePath: 'docs/playwright-e2e-guide.md' },
       { key: 'rules', label: 'Team Coding Rules', filePath: '.claude/CLAUDE.md' },
       { key: 'project', label: 'Project Architecture', filePath: 'CLAUDE.md' },
     ],
