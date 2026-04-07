@@ -58,7 +58,7 @@ export default function AskStartRepoForm() {
 
       <FormCard>
         {/* Group 1 — Project Info */}
-        <Divider orientationMargin='0'>ข้อมูลโปรเจค</Divider>
+        <Divider titlePlacement='left'>ข้อมูลโปรเจค</Divider>
 
         <FieldGroup>
           <label>
@@ -86,7 +86,7 @@ export default function AskStartRepoForm() {
         </FieldGroup>
 
         {/* Group 2 — Project Type */}
-        <Divider orientationMargin='0'>ประเภทโปรเจค *</Divider>
+        <Divider titlePlacement='left'>ประเภทโปรเจค *</Divider>
 
         <FieldGroup>
           <Radio.Group
@@ -110,7 +110,7 @@ export default function AskStartRepoForm() {
         </FieldGroup>
 
         {/* Group 3 — Core Features */}
-        <Divider orientationMargin='0'>Features ที่ต้องการ</Divider>
+        <Divider titlePlacement='left'>Features ที่ต้องการ</Divider>
 
         <FieldGroup>
           <CheckRow>
@@ -156,7 +156,7 @@ export default function AskStartRepoForm() {
         </FieldGroup>
 
         {/* Group 4 — Notes */}
-        <Divider orientationMargin='0'>อื่นๆ</Divider>
+        <Divider titlePlacement='left'>อื่นๆ</Divider>
 
         <FieldGroup>
           <Input.TextArea
