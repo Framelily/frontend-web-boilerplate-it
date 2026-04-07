@@ -227,7 +227,7 @@ const PageContainer = styled.div`
 `
 
 const FormCard = styled.div`
-  background: #fff;
+  background: var(--ant-color-bg-container, #fff);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 24px;
@@ -277,7 +277,7 @@ const OutputSection = styled.div`
 `
 
 const OutputBlock = styled.div`
-  background: #fff;
+  background: var(--ant-color-bg-container, #fff);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 16px;

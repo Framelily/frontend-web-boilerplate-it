@@ -35,6 +35,7 @@ function buildFeatures(form: IProjectFormData): string[] {
 }
 
 export function generateOutput(form: IProjectFormData): IGeneratedOutput {
+  // type is guaranteed non-null by caller validation before calling this function
   const type = form.type!
   const repo = REPO_MAP[type]
   const slug = toSlug(form.name)
